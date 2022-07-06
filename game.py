@@ -19,7 +19,7 @@ class CVRPS:
     def get_computer_choice(self, list_choices): # This function randomly picks an option from "rock, paper, scissors" and returns it as the computer's choice.
         return random.choice(list_choices)
 
-    def get_prediction(self): 
+    def get_prediction(self): # Gets prediction from the computer by utilising the Keras model
         
         start_time = time.time()
         end_time = start_time + 5
@@ -43,7 +43,7 @@ class CVRPS:
                 message = 'Show your hand!'
                 break
 
-                    # Press q to close the window
+            # Press q to close the window
             cv2.putText(frame, message, (30, 50), cv2.FONT_HERSHEY_PLAIN, 3, (0, 0, 0), 3)
             cv2.imshow('frame', frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
